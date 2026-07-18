@@ -40,6 +40,7 @@ General things:
     - a using-declaration
 - Spell things correctly
 - Do not needlessly use `()` unless it is to aid readability with a calculation
+- Blank lines should only be used to aid readability
 
 ## Pointers
 The pointer is part of the type and so declarations of a pointer should be
@@ -69,6 +70,17 @@ When using mathematical operators, a space should be either side of the operator
 
 This helps differentiate multiplication from dereferencing.
 Parentheses are the exception and are formatted `int c = (a / b) * d;`.
+
+Increment and decrement operators do not have a space on one side such that it is obvious what they are acting upon. `i++` and `++i` are allowable.
+
+If unsure, have a space around the operator.
+
+### Whitespace
+One blank line should be left after every function definition.
+Two blank lines should be left after a class definition.
+Two blank lines after all `#include` statements.
+
+Two spaces should be present before inline comments
 
 ### Functions
 #### Declarations
@@ -111,3 +123,50 @@ Do not surround the return result with `()`.
 
 #### Calls
 Calls should follow the same format as the declaration.
+
+### Loops and Conditionals
+Conditionals should look like the following
+```
+if (test) {
+    ...
+} else {
+    ...
+}
+switch (i) {
+    case 1:
+        ...
+    case 2:
+        break;
+}
+```
+If the `{}` can be omitted, it is up to the programmer to decide wherether or not to include them.
+The conditional would then look like
+```
+if (test)
+    foo;
+...
+```
+
+Loops should look like the following
+```
+while (test) {
+    ...
+}
+for (int i = 0; i < 5; ++i) {
+    ...
+}
+for ( ; i < 5; ++i) {
+    ...
+}
+for (auto x : iterable) {
+    ...
+}
+```
+For loops always have a space after the semicolon,
+unless there is not statement (such as no initialiser)
+in which case a space is before and after the semicolon.
+
+
+# Closing Remarks
+If something is not covered in this style document, code in the style that is already present within that file.
+If you wish to add to this document, make an issue and add your improvement in the description.
