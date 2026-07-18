@@ -152,6 +152,11 @@ Loops should look like the following
 while (test) {
     ...
 }
+
+do {
+    ...
+} while (test);
+
 for (int i = 0; i < 5; ++i) {
     ...
 }
