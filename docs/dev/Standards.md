@@ -1,6 +1,9 @@
 # File Naming
 All implementation files should end in `.cpp` and should have associated `.h` header file.
 
+Both header and source files should be written in camelCase.
+The name of the file should be reflective of the code it contains.
+
 ## Header Files
 Header files should have `#define` guards to prevent multiple inclusion.
 The format for the symbol name is as follows, `<PATH>_<FILE>_H_`.
@@ -41,6 +44,22 @@ General things:
 - Spell things correctly
 - Do not needlessly use `()` unless it is to aid readability with a calculation
 - Blank lines should only be used to aid readability
+
+## Naming conventions
+Naming in general should be verbose.
+
+- Variables start with a lower case and are camelCase
+- Functions start with a lower case and are snake_case
+- Class names start with a Captial and are PascalCase
+
+## Comments
+Inline comments have two spaces between `//` and the code and a space after.
+```
+int apples = 0;  // This is where a comment goes
+```
+If a function needs commenting, the comment should be on the line before the definition.
+The same principle applies to code sections and classes.
+
 
 ## Pointers
 The pointer is part of the type and so declarations of a pointer should be
@@ -89,20 +108,20 @@ The bottom two examples are for those cases where the definition is too long to 
 The example definitions are in order of preferrence
 i.e. you should try to keep all the parameters on the same line.
 ```
-ReturnType ClassName::FunctionName(Type par_name1, Type par_name2) {
-    DoSomething();
+ReturnType ClassName::functionName(Type par_name1, Type par_name2) {
+    doSomething();
     ...
 }
-ReturnType ClassName::ReallyLongFunctionName(Type par_name1, Type par_name2,
+ReturnType ClassName::reallyLongFunctionName(Type par_name1, Type par_name2,
                                              Type par_name3) {
-    DoSomething();
+    doSomething();
     ...
 }
-ReturnType LongClassName::ReallyReallyReallyLongFunctionName(
+ReturnType LongClassName::reallyReallyReallyLongFunctionName(
         Type par_name1,  // 8 space indent
         Type par_name2,
         Type par_name3) {
-    DoSomething();  // 4 space indent
+    doSomething();  // 4 space indent
     ...
 }
 ```
